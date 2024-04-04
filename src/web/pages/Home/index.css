@@ -1,0 +1,91 @@
+.homepage {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+}
+
+section {
+  padding: 4rem 1rem;
+}
+
+.homepage h1 {
+  font-size: 64px;
+}
+
+.homepage h2 {
+  font-size: 48px;
+}
+
+.homepage h3 {
+  font-size: 34px;
+}
+
+.homepage h4 {
+  font-size: 24px;
+}
+
+.homepage h5 {
+  font-size: 20px;
+}
+
+.homepage h6 {
+  font-size: 18px;
+}
+
+/* Media */
+@media (max-width: 1024px) {
+  .homepage h1 {
+    font-size: 48px;
+  }
+
+  .homepage h2 {
+    font-size: 34px;
+  }
+
+  .homepage h3 {
+    font-size: 24px;
+  }
+
+  .homepage h4 {
+    font-size: 20px;
+  }
+
+  .homepage h5 {
+    font-size: 18px;
+  }
+
+  .homepage h6 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage h1 {
+    font-size: 34px;
+  }
+
+  .homepage h2 {
+    font-size: 24px;
+  }
+
+  .homepage h3 {
+    font-size: 20px;
+  }
+
+  .homepage h4 {
+    font-size: 18px;
+  }
+
+  .homepage h5 {
+    font-size: 16px;
+  }
+
+  .homepage h6 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar .container {
+    flex-direction: column;
+  }
+}
