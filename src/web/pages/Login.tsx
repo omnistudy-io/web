@@ -57,7 +57,7 @@ function Login() {
 
         try {
             
-            const result = await axios.post("http://localhost:3001/auth/login", {
+            const result = await axios.post("http://localhost:8080/auth/login", {
                 email: loginEmail,
                 password: loginPassword
             }, {
@@ -66,8 +66,10 @@ function Login() {
                 }
             });
 
+            console.log(result.data);
+
             if(result.data.ok) {
-                localStorage.setItem("token", result.data.rows[0].token);
+                localStorage.setItem("token", result.data.rows[0]);
                 navigate("/app/courses");
             }
             else {
@@ -77,7 +79,7 @@ function Login() {
             // AppAuth.authorize(user, SignInMethod.Email);
             // navigate("/app/courses");
         } catch (error) {
-            console.error("Error registering new user:", error);
+            console.error("Error logging in new user:", error);
         }
     };
 

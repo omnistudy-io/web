@@ -13,16 +13,6 @@ import axios from "axios";
 
 export default function Router() {
 
-    useEffect(() => {
-        axios.get("http://localhost:3001/courses", {
-            headers: {
-                authorization: 'Bearer 123'
-            }
-        }).then(res => {
-            console.log(res.data);     
-        });
-    }, []);
-
     return(
         <div className="h-full">
             <Routes>

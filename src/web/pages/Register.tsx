@@ -70,7 +70,7 @@ const Register: React.FC = () => {
     const register = async (e: React.FormEvent) => {
         try {
             e.preventDefault();
-            const result = await axios.post("http://localhost:3001/users", {
+            const result = await axios.post("http://localhost:8080/users", {
                 firstName: firstName,
                 lastName: lastName,
                 email: registerEmail,
@@ -82,7 +82,7 @@ const Register: React.FC = () => {
             });
 
             if(result.data.ok) {
-                localStorage.setItem("token", result.data.rows[0].token);
+                localStorage.setItem("token", result.data.rows[0]);
                 navigate("/app/courses");
             }
             else {
