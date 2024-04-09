@@ -32,7 +32,7 @@ export default function Router() {
   useEffect(() => {
       console.log("Checking auth");
       const token = localStorage.getItem("token");
-      axios.get(`http://localhost:8080/auth/validate/${token}`).then((res) => {
+      axios.get(`http://localhost:3001/auth/validate/${token}`).then((res) => {
         if (res.data.ok) {
           console.log("User is authenticated");
         }

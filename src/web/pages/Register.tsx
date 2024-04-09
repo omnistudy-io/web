@@ -70,7 +70,7 @@ const Register: React.FC = () => {
     const register = async (e: React.FormEvent) => {
         try {
             e.preventDefault();
-            const result = await axios.post("http://localhost:8080/users", {
+            const result = await axios.post("http://localhost:3001/users", {
                 firstName: firstName,
                 lastName: lastName,
                 email: registerEmail,
