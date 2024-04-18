@@ -1,0 +1,20 @@
+# Download Node.js from docker hub
+FROM node:latest
+
+# Create directory for container
+WORKDIR /web
+
+# Install dependencies and copy files
+COPY package*.json ./
+RUN npm install
+COPY . .
+
+# Environment variables
+ENV ENVIRONMENT dev
+ENV HOSTNAME http://localhost
+ENV PORT 3000
+ENV API_URL http://localhost:3001
+
+# Expose port and run the app
+EXPOSE 3000
+CMD ["npm", "start"]
