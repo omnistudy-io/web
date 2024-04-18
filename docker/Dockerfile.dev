@@ -12,9 +12,9 @@ COPY . .
 # Environment variables
 ENV ENVIRONMENT dev
 ENV HOSTNAME http://localhost
-ENV PORT 3000
+ENV PORT 3005
 ENV API_URL http://localhost:3001
 
 # Expose port and run the app
-EXPOSE 3000
+EXPOSE 3005
 CMD ["npm", "start"]
