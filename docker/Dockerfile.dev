@@ -1,20 +1,24 @@
-# Download Node.js from docker hub
+# Use Node.js as the base image
 FROM node:latest
 
-# Create directory for container
+# Set the working directory in the container
 WORKDIR /web
 
-# Install dependencies and copy files
+# Copy package.json and package-lock.json to the container
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install
+
+# Copy the app's source code to the container
 COPY . .
 
 # Environment variables
-ENV ENVIRONMENT dev
-ENV HOSTNAME http://localhost
 ENV PORT 3005
-ENV API_URL http://localhost:3001
+ENV REACT_APP_API_BASE http://localhost:3001
 
-# Expose port and run the app
+# Expose the application port
 EXPOSE 3005
+
+# Start the application
 CMD ["npm", "start"]
